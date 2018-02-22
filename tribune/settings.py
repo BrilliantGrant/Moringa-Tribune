@@ -14,7 +14,7 @@ import os
 
 import dj_database_url
 
-# from decouple import config
+from decouple import config
 
 # bd_from_env = dj_database_url.config(conn_max_age=500)
 
