@@ -14,8 +14,7 @@ import os
 
 import dj_database_url
 
-
-from decouple import config
+# from decouple import config
 
 # bd_from_env = dj_database_url.config(conn_max_age=500)
 
@@ -27,9 +26,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/1.11/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-# SECRET_KEY = '1_aq9iz5f=ge$4(r)8uq55n8ciyjq+--vn$*94+wea)(dp31wk'
+SECRET_KEY = '1_aq9iz5f=ge$4(r)8uq55n8ciyjq+--vn$*94+wea)(dp31wk'
 
-SECRET_KEY = config('SECRET_KEY')
+# SECRET_KEY = config('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 # DEBUG = True
 DEBUG = config('DEBUG', default=False, cast=bool)
