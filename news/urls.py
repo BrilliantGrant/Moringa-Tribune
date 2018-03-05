@@ -4,6 +4,7 @@ from django.conf import settings
 from django.conf.urls.static import static
 
 urlpatterns=[
+
     # url('^$',views.welcome,name = 'welcome'),
     # url('^today/$',views.news_today,name='newsToday'),
     url(r'^$',views.news_today,name='newsToday'),
@@ -11,7 +12,8 @@ urlpatterns=[
     url(r'^search/', views.search_results, name='search_results'),
     url(r'^article/(\d+)',views.article,name ='article'),
     url(r'^accounts/', include('registration.backends.simple.urls')),
-     url(r'^new/article$', views.new_article, name='new-article')
+    url(r'^new/article$', views.new_article, name='new-article'),
+    url(r'^ajax/newsletter/$', views.newsletter, name='newsletter'),
     ]
 
 if settings.DEBUG:
